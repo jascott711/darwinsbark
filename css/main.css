@@ -1,0 +1,721 @@
+@charset "utf-8";
+/* -- One Punch Man Fansite - Jesse Scott - August 8th, 2015 -- */
+
+/* -- Fonts -- */
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+
+/* -- Global -- */
+html	{
+	background-color: rgb(6,6,6);
+	overflow-x: hidden !important;
+}
+body	{
+	margin: 0;
+}
+div, ul, li, a, span	{
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+title	{
+	font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+/* -- Header -- */
+#header	{
+	background-color: #000;
+	background-image: none;
+	position: fixed;
+	width: 100%;	
+	width: 100vw;
+	height: 90px;
+	top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+}
+.header_wrapper	{
+    position: relative;
+	height: inherit;
+	max-width: 1340px;
+    margin: 0 auto;	
+}
+.header_logo	{
+	float: left;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 48px;
+    line-height: 48px;
+    font-weight: 700;		
+    width: auto;
+    top: 25px;
+    left: 10px;
+    position: relative;
+
+    animation-name: slideRight;
+	-webkit-animation-name: slideRight;		
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+.header_logo:hover {
+	cursor: pointer;
+}
+.logo_text {
+	float: left;
+	color: #fff;
+}
+
+
+
+/* -- Nav -- */
+.nav {
+    position: absolute;
+    z-index: 99999999999;
+	width: auto;
+	right: 10px;
+    float: right;
+
+    animation-name: slideLeft;
+	-webkit-animation-name: slideLeft;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;
+}
+.nav-bars {
+    padding: 22px 20px;
+    display: none;
+}
+.nav-bars:hover {
+	cursor: pointer;
+}
+.nav-bars .fa-bars {
+    text-align: right;
+}
+
+.nav_list {
+    padding: 20px 20px 1px;
+    z-index: 1;
+    list-style: none;
+	transition: all 0.5s ease;
+}
+
+
+.nav_list li {
+    display: inline-block;
+    margin: 0 0 30px 30px;
+}
+.nav_list li .fa:before {
+	display: none;
+}
+
+.nav .list_pages .item_page .link:after {
+    content: '';
+    width: 100%;
+    display: block;
+    height: 1px;
+    margin-top: 4px;
+    position: absolute;
+    background-color: #fff;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    -ms-transform: scale(0.25);
+    -o-transform: scale(0.25);
+    transform: scale(0.25);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.nav .list_pages .item_page.active .link {
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+#nav_sub_home {
+    height: 200px;
+}
+#nav_sub_sites	{
+	width: 290px !important;
+    height: 200px;
+}
+
+.nav_db_sites {
+    list-style: none;
+    margin-top: -400px;    
+    right: 0;
+    padding: 20px 20px 1px;
+    background-color: #000;
+	transition: all 0.5s ease;
+}
+.nav_db_sites.expanded {
+	margin-top: 65px; 
+}
+
+#db-link {
+	margin: 0 0 30px 0;
+}
+
+
+/* -- Icons -- */
+.fa {
+    font-size: 44px !important;
+	line-height: 44px; 
+	width: 100%;
+	color: #fff;	
+	transition: all 0.5s ease;
+
+}
+.fa:before {
+    margin-right: 20px;
+}
+
+.fa > span	{
+	top: -5px;
+    position: relative;
+	font-weight: 700;
+	font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.fa-user:before {
+    margin-left: 3px;
+    margin-right: 25px;
+}
+
+.fa-sitemap:before {
+    transform: rotate(270deg);
+    content: "\f0e8";
+    position: absolute;
+}
+.sites-link {
+    margin-left: 65px;
+}
+
+
+
+/* -- Content -- */
+.page	{
+    background-size: 120% auto;
+    background-attachment: fixed;
+    background-position: 50% 0px;
+	min-height: 100vh;
+    overflow: hidden;
+}
+
+.page_wrapper	{
+	max-width: 1320px;
+	margin: 0 auto;
+    padding: 90px 0;
+    overflow: hidden;
+}
+.page_content	{
+	padding: 40px 0 80px;
+	width: 100%;
+    max-width: 1320px;
+}
+
+
+
+
+/* -- Page : Home -- */
+#home	{
+	background-image: url(../images/tech/cables.jpg);
+	background-color: #c3959a;
+}
+
+
+
+/* -- Page : Home : Name -- */
+.name {
+	color: #fff;	
+	font-weight: 700;
+	font-size: 120px;
+	font-family: 'Josefin Sans', sans-serif;
+
+	width: 260px;
+    height: 130px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+
+    padding-right: 20px;
+}
+.name .word	{
+	width: auto;	
+    float: left;
+    text-align: center;
+    opacity: 1;
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;
+}
+
+#home > div > div > div.name > div.word.w1{   
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;	
+}
+
+#home > div > div > div.name > div.word.w2{
+    animation-name: expandUp;
+	-webkit-animation-name: expandUp;	
+}
+
+#home > div > div > div.name > div.word.w3{   
+	animation-name: slideLeft;
+	-webkit-animation-name: slideLeft;	
+}
+
+
+/* -- Page : Home : Quote -- */
+.quote	{
+    margin: 20px auto 0;
+    width: 620px;
+    font-weight: 700;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 3px;
+ 	opacity: 1;
+ 	clear: both;
+	color: #fff;
+}
+.call-no-end .quote	{
+	opacity: 0;
+}
+
+/* -- Page : Home : Nav Tiles -- */
+.nav_tiles {
+	display: block;
+	position: relative;
+	margin: 50px auto;
+    padding: 0 0 20px;
+    overflow: hidden;
+}
+.nav_tiles .tile {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+    width: 48%;
+    margin: 1%;
+	float: left;
+    padding: 150px 0;
+	transition: all 0.5s ease;
+}
+.nav_tiles .tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+.nav_tiles .tile1 {
+	background-image: url(/images/tile-tech.png?1);
+}
+.nav_tiles .tile2 {
+	background-image: url(/images/tile-gallery.png?1);
+}
+.nav_tiles .tile3 {	
+	background-image: url(/images/tile-food.png?1);
+}
+
+
+
+
+
+/* -- Page : About -- */
+#about	{
+	background-image: url(../images/tech/cage.jpg);
+	background-color: #486a82;	
+}
+
+.page_left	{
+	float: left;
+	width: 49.5%;
+	background-color: rgba(0,0,0,0.4);
+	opacity: 0;
+}
+.page_right	{
+	float: right;
+	width: 49.5%;
+	background-color: rgba(0,0,0,0.4);
+	opacity: 0;
+}
+
+.call-no-end .page_left,	
+.call1 .page_left	{
+	opacity: 1;
+	
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;		
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;
+
+}
+.call-no-end .page_right,	
+.call1 .page_right	{
+	opacity: 1;
+
+	animation-name: slideLeft;
+	-webkit-animation-name: slideLeft;
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;
+}
+
+
+.profile_img	{
+	margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    max-width: 460px;
+    background-image: url(images/jesseheart.jpg?1);
+    background-size: cover;
+}
+
+.gallery-slider	{
+	max-width: 600px;
+	width: 100%;
+    margin: 0 auto;
+}
+.slick-slider {
+    margin-bottom: 0 !important;
+}
+.slider.slider-nav.slick-slider .slick-track {
+    height: auto;
+    overflow: hidden;
+
+	background-color: #fff;
+}
+.slider.slider-nav.slick-slider .slick-slide	{
+	opacity: 0.25;
+}
+.slider.slider-nav.slick-slider .slick-slide.slick-active	{
+	opacity: 0.5;
+}
+.slider.slider-nav.slick-slider .slick-slide.slick-current	{
+	opacity: 1;
+}
+
+
+.slider.slider-nav.slick-slider .slick-list {
+    margin-top: 70px;
+}
+.slider.slider-nav.slick-slider .slick-prev {
+    left: 0 !important;
+    top: -75px;
+}
+.slick-prev:before {
+    content: '⇦' !important;
+    font-size: 90px !important;
+}
+.slider.slider-nav.slick-slider .slick-next {
+    right: 55px !important;
+    top: -75px;
+}
+.slick-next:before {
+    content: '⇨' !important;
+    font-size: 90px !important;
+}
+
+
+
+/* -- Page : Work -- */
+#work	{
+	background-image: url(../images/tech/keyboard.jpg);
+	background-color: #849a8e;	
+}
+#work .page_content {
+    position: relative;
+}
+#work h2 {
+	color: #fff;	
+	font-weight: 700;
+	font-size: 64px;
+	font-family: 'Josefin Sans', sans-serif;	
+	margin: 10px;
+	border-bottom: 3px solid #fff;
+}
+
+#work .description {
+	color: #fff;
+    padding: 30px 0;
+	margin: 10px;
+    position: absolute;
+    padding-left: 650px;
+    top: 0;
+}
+#work .description p {
+	font-size: 18px;
+	font-family: 'Josefin Sans', sans-serif;	
+	font-style: italic;	
+    text-align: right;
+	margin: 0;
+}
+#work .portfolio_block {
+    overflow: visible;
+}
+#work .portfolio_block .item {
+    width: 48%;
+    float: left;
+    margin: 1%;
+    overflow: hidden;
+	transition: all 0.5s ease;
+}
+
+#work .portfolio_block .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+#work .portfolio_block .item .image {
+	background-image: inherit;
+	background-size: cover;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#work .portfolio_block .item .image img {
+	display: none;
+} 
+
+
+
+
+
+
+
+
+
+/* -- HighSlide -- */
+.highslide img {
+	border: none !important;
+}
+.highslide-caption {
+	width: 100%;
+	text-align: center;
+}
+.highslide-close {
+	display: none !important;
+}
+.highslide-number {
+	display: inline;
+	padding-right: 1em;
+	color: white;
+}
+.highslide-credits	{
+	display: none !important;
+}
+a.highslide-full-expand {
+    position: absolute;
+    right: 0;
+    top: -80px;
+}
+
+
+/* -- Footer -- */
+#footer	{
+	background-color: #000;
+	position: fixed;
+	width: 100%;	
+	width: 100vw;
+	height: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.footer_wrapper	{
+	max-width: 1320px;
+    margin: 0 auto;
+    padding: 10px;	
+}
+.footer_social	{
+	position: absolute;
+    top: 7px;
+}
+.footer_copy	{
+	text-align: center;
+	margin: 0 auto;
+}
+.footer_copy_text	{
+    top: 0;
+    position: relative;
+    font-weight: 700;
+	font-family: 'Josefin Sans', sans-serif;
+    text-transform: lowercase;
+    font-size: 17px;
+    color: #fff;
+}
+.footer_social .fa {
+	font-size: 30px !important;
+}
+
+
+@media screen and (max-width: 1450px)	{
+	/* -- Content -- */
+	.page	{
+	    background-size: cover;
+	}
+}
+
+@media screen and (max-width: 900px)	{
+	/* -- Header -- */
+	.header_text	{
+		display: none;	
+	}
+
+	#work .description {
+	    position: relative;
+	    padding-left: 0;
+	}
+
+}
+
+@media screen and (max-width: 820px)	{
+
+	.nav-bars {
+		display: block;
+	}
+	.nav_list {
+	    width: 180px;
+		background-color: #000;
+	    padding: 20px 20px 1px;
+	    z-index: 1;
+	    list-style: none;
+	    margin-top: -500px;
+	}
+	.nav.expanded .nav_list {
+		margin-top: 2px; 
+	}
+	.nav_list li {
+	    margin: 0 0 30px 0;
+	}
+	.nav_list li,
+	.nav_list li .fa:before {
+	    display: inline-block;
+	}
+
+	/* -- Content -- */
+	.page_content {	  
+    	padding: 40px 0;
+	}
+	.page_left,
+	.page_right	{
+		margin: 20px;
+		float: none;
+		width: 90%;
+		opacity: 0;
+	}
+	.name {
+    	padding-right: 0;
+	}
+	.quote	{
+	    text-align: center;
+	    font-size: 32px;
+	    width: 100%;
+	}
+	.profile_img	{
+        max-width: 222px;
+ 	    max-height: 334px;
+	}
+
+	.nav_tiles {
+	    padding: 0px 10px 20px;
+	}
+	.nav_tiles .tile {
+	    width: 100%;
+	    margin: 0;
+	    float: none;
+	    margin-bottom: 20px;
+	}
+
+	#work .portfolio_block {
+	    padding: 20px;
+	}
+	#work .portfolio_block .item {
+	    width: 100%;
+	    float: none;
+	    margin: 0 0 10px;
+	}
+
+
+
+	/* -- Slider -- */
+	.slider.slider-nav.slick-slider .slick-track {	left: -50px !important;	}
+	.slick-cloned	{	display: none !important;	}
+	.gallery-slider {
+	    width: 90%;
+	    margin: 20px;
+	}
+	.slider.slider-nav.slick-slider .slick-prev {
+	    top: -85px;
+	}
+	.slider.slider-nav.slick-slider .slick-next {
+	    right: 70px !important;
+	    top: -85px;
+	}
+
+	/* -- Footer -- */
+	#footer	{	
+		height: 45px;	
+	}
+	.footer_copy {
+	    text-align: center;
+	    margin: 5px auto;
+	}
+}
+@media screen and (max-width: 600px)	{
+	.fa > span	{
+	    font-size: 24px;
+	}
+
+	/* -- Header -- */
+	.header_logo {
+
+	}
+	.name {
+	    padding-right: 0;
+	}
+}

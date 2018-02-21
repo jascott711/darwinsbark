@@ -1,0 +1,159 @@
+@charset "utf-8";
+/*-- practicehatesperfect - blacksite - Jesse Scott - June 5th, 2015 --*/
+
+
+html	{
+	background-color: rgb(6,6,6);
+}
+
+
+/*-- Header --*/
+#header	{
+	background-color: #000;
+	background-image: none;
+}
+.header_text	{
+}
+.header .fbname {
+    position: absolute !important;
+    top: 20px;
+    right: 200px;
+	font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+
+
+/*-- Nav --*/
+.nav_list {
+	display: none;
+	
+	background-color: #000;
+    padding: 20px;
+    z-index: 1;
+    list-style: none;
+    margin-top: -500px;
+}
+.nav_sub {
+	background-color: #000;
+}
+.nav_db_sites {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.login,
+.logout {
+    position: absolute !important;
+    top: 20px;
+    right: 0;
+	font-family: 'Josefin Sans', sans-serif;
+    background-color: #222;
+    color: #fff;
+    width: 125px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+
+/*-- Content --*/
+.page_next {
+	position: absolute;
+	right: 20px;
+	bottom: 50px;
+}
+
+
+/*-- Page : Home --*/
+#home	{
+	background-color: rgb(6,6,6);
+	background-image: none;
+}
+.page_wrapper	{
+    position: relative;
+}
+.page_content	{
+    min-height: 62vh;
+}
+
+
+.name {
+	color: #fff;	
+}
+.name .word	{
+    opacity: 1;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 96px;
+	font-family: 'Josefin Sans', sans-serif;
+	color: #fff;
+	text-align: center;
+}
+
+
+.stats {
+	width: 640px;
+	margin: 0 auto;
+	color: #fff;
+	text-align: center;
+}
+.stats div {
+	color: #fff;
+	text-align: center;
+	
+}
+
+
+
+
+
+
+
+
+/*-- Page : Page1 --*/
+.page.page1 {
+	background-image: url(../images/tech/cables.jpg)
+}
+
+/*-- Page : Page2 --*/
+.page.page2 {
+	background-image: url(../images/tech/cage.jpg)
+}
+
+/*-- Page : Page3 --*/
+.page.page3 {
+	background-image: url(../images/tech/keyboard.jpg)
+}
+
+
+
+
+/*-- Footer --*/
+#footer	{
+	background-color: #000;
+}
+.footer_copy_text	{
+    color: #fff;
+}
+
+
+#footer > div > div.footer_copy > img {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+@media screen and (max-width: 820px)	{
+
+	/*-- Content --*/
+	.quote-2	{
+	    width: 415px;
+	}
+}
