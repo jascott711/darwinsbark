@@ -179,7 +179,7 @@ title	{
 
 /* -- Icons -- */
 .fa {
-    font-size: 44px !important;
+    font-size: 32px !important;
 	line-height: 44px; 
 	width: 100%;
 	color: #fff;	
@@ -191,7 +191,7 @@ title	{
 }
 
 .fa > span	{
-	top: -5px;
+	top: -2px;
     position: relative;
 	font-weight: 700;
 	font-family: 'Josefin Sans', sans-serif;
