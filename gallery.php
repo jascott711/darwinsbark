@@ -2,18 +2,18 @@
 
 
 <?php
-include "php/head.php";
+require_once "partials/head.php";
 ?>
 
-<link rel="stylesheet" type="text/css" href="css/gallery.css" />
+<link rel="stylesheet" type="text/css" href="library/css/gallery.css" />
 
-<script type="text/javascript" src="js/gallery.js"></script>
-<script type="text/javascript" src="js/callbyscroll.js"></script>
+<script type="text/javascript" src="library/js/gallery.js"></script>
+<script type="text/javascript" src="library/js/callbyscroll.js"></script>
 
-<link rel="prefetch" href="css/images/gallery/puppy1.jpg">
-<link rel="prefetch" href="css/images/gallery/puppy2.jpg">
-<link rel="prefetch" href="css/images/gallery/puppy3.jpg">
-<link rel="prefetch" href="css/images/gallery/puppy4.jpg">
+<link rel="prefetch" href="library/images/gallery/puppy1.jpg">
+<link rel="prefetch" href="library/images/gallery/puppy2.jpg">
+<link rel="prefetch" href="library/images/gallery/puppy3.jpg">
+<link rel="prefetch" href="library/images/gallery/puppy4.jpg">
 
 </head>
 
@@ -24,11 +24,11 @@ include "php/head.php";
     <div class="header_wrapper">
 
     <?php
-    include "php/nav.php";
+    require_once "partials/nav.php";
     ?>
 
     <?php
-    include "php/sites.php";
+    require_once "partials/sites.php";
     ?>
 
     </div>
@@ -53,13 +53,18 @@ include "php/head.php";
 <div id="footer-mask" class="footer-mask puppy1"></div>
 
 <?php
-include "php/footer.php";
+require_once "partials/footer.php";
 ?>
+
+<?php
+require_once "partials/scripts.php";
+?>
+
 
 <script type="text/javascript">
 
 <?php 
-    $dir = 'css/images/gallery/';
+    $dir = 'library/images/gallery/';
     $scan = scandir($dir);
     $imageAmount = count($scan) - 2;
     

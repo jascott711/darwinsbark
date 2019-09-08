@@ -2,11 +2,11 @@
 
 
 <?php
-include "../php/head-recipes.php";
+require_once "../partials/head.php";
 ?>
 
-<link rel="stylesheet" type="text/css" href="../css/food.css" />
-<link rel="stylesheet" type="text/css" href="../css/recipes.css" />
+<link rel="stylesheet" type="text/css" href="/library/css/food.css" />
+<link rel="stylesheet" type="text/css" href="/library/css/recipes.css" />
 
 <script type="text/javascript" src="../js/callbyscroll.js"></script>
 
@@ -21,7 +21,7 @@ include "../php/head-recipes.php";
     <div class="header_wrapper">
 
 	<?php
-	include "../php/sites.php";
+	require_once "../partials/sites.php";
 	?>
 
     </div>
@@ -29,7 +29,6 @@ include "../php/head-recipes.php";
 <!-- end header -->
 
 <!-- begin content -->
-
 <div id="lemon-cream-squares-page" class="page">
 	<div id="background" class="background"></div>
 
@@ -38,11 +37,11 @@ include "../php/head-recipes.php";
 			<div class="recipe">		
 				<div class="title">
 					<h2>Lemon Cream Squares</h2>
-					<img src="../css/images/food/lemon-cream-squares-banner.jpg" alt="lemon-cream-squares-banner" width="100%">
+					<img src="/library/images/food/lemon-cream-squares-banner.jpg" alt="lemon-cream-squares-banner" width="100%">
 				</div>				
 
 				<?php
-				include "../php/recipe-social.php";
+				require_once "../partials/recipe-social.php";
 				?>
 
 				<div class=recipe-path>
@@ -53,7 +52,7 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture main">
-					<img src="../css/images/food/lemon-cream-squares-title.jpg" alt="lemon-cream-squares" width="100%">
+					<img src="/library/images/food/lemon-cream-squares-title.jpg" alt="lemon-cream-squares" width="100%">
 				</div>
 
 				<div class="ingredients">
@@ -78,7 +77,7 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture second">
-					<img src="../css/images/food/lemon-cream-squares-ingredients.jpg" alt="lemon-cream-squares-2" width="100%">
+					<img src="/library/images/food/lemon-cream-squares-ingredients.jpg" alt="lemon-cream-squares-2" width="100%">
 				</div>
 
 				<div class="utensils">
@@ -93,7 +92,7 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture third">
-					<img src="../css/images/food/lemon-cream-squares-image.jpg" alt="lemon-cream-squares-3" width="100%">
+					<img src="/library/images/food/lemon-cream-squares-image.jpg" alt="lemon-cream-squares-3" width="100%">
 				</div>
 
 				<div class="directions">
@@ -117,7 +116,7 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture four">
-					<img src="../css/images/food/lemon-cream-squares-bonus.jpg" alt="lemon-cream-squares-4" width="100%">
+					<img src="/library/images/food/lemon-cream-squares-bonus.jpg" alt="lemon-cream-squares-4" width="100%">
 				</div>
 
 				<div class="bonus">
@@ -143,17 +142,21 @@ include "../php/head-recipes.php";
 						</ul>
 					</div>	
 				</div>
-				<div class="fb-comments" data-width="100%" data-href="http://jessescott.plutolighthouse.net/recipes/recipe-lemon-cream-squares.php" data-numposts="5"></div>
+				<div class="fb-comments" data-width="100%" data-href="http://www.darwinsbark.ca/recipes/recipe-lemon-cream-squares.php" data-numposts="5"></div>
 			</div>
 		</div>	
 	</div>
 </div>
-
 <!-- end page content -->
 
 <?php
-include "../php/footer.php";
+require_once "../partials/footer.php";
 ?>
+
+<?php
+require_once "../partials/scripts.php";
+?>
+
 
 </body>
 </html>

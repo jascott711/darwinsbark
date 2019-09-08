@@ -2,7 +2,7 @@
 
 
 <?php
-include "php/head.php";
+require_once "php/head.php";
 ?>
 
 <link rel="stylesheet" type="text/css" href="css/tech.css" />
@@ -23,7 +23,7 @@ include "php/head.php";
 <body id="body" class="body page0" data-page="tech">
 
 <?php
-include "php/facebook.php";
+require_once "php/facebook.php";
 ?>
 
 
@@ -32,7 +32,7 @@ include "php/facebook.php";
     <div class="header_wrapper">
 
 	<?php
-	include "php/sites.php";
+	require_once "php/sites.php";
 	?>
 
 	<div class="fbname">Welcome to Darwin's Bark</div>
@@ -89,7 +89,7 @@ include "php/facebook.php";
 <!-- end page content -->
 
 <?php
-include "php/footer.php";
+require_once "php/footer.php";
 ?>
 
 </body>

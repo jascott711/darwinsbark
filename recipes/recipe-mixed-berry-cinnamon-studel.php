@@ -2,11 +2,11 @@
 
 
 <?php
-include "../php/head-recipes.php";
+require_once "../partials/head.php";
 ?>
 
-<link rel="stylesheet" type="text/css" href="../css/food.css" />
-<link rel="stylesheet" type="text/css" href="../css/recipes.css" />
+<link rel="stylesheet" type="text/css" href="/library/css/food.css" />
+<link rel="stylesheet" type="text/css" href="/library/css/recipes.css" />
 
 <script type="text/javascript" src="../js/callbyscroll.js"></script>
 
@@ -21,7 +21,7 @@ include "../php/head-recipes.php";
     <div class="header_wrapper">
 
 	<?php
-	include "../php/sites.php";
+	require_once "../partials/sites.php";
 	?>
 
     </div>
@@ -38,11 +38,11 @@ include "../php/head-recipes.php";
 			<div class="recipe">									
 				<div class="title">
 					<h2>Mixed Berry Cinnamon Studel Bites</h2>
-					<img src="../css/images/food/mixed-berry-cinnamon-studel-banner.jpg" alt="mixed-berry-cinnamon-studel-banner" width="100%">
+					<img src="/library/images/food/mixed-berry-cinnamon-studel-banner.jpg" alt="mixed-berry-cinnamon-studel-banner" width="100%">
 				</div>
 
 				<?php
-				include "../php/recipe-social.php";
+				require_once "../partials/recipe-social.php";
 				?>
 
 				<div class=recipe-path>
@@ -53,7 +53,7 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture main">
-					<img src="../css/images/food/mixed-berry-cinnamon-studel-title.jpg" alt="mixed-berry-cinnamon-studel" width="100%">
+					<img src="/library/images/food/mixed-berry-cinnamon-studel-title.jpg" alt="mixed-berry-cinnamon-studel" width="100%">
 				</div>
 
 				<div class="ingredients">
@@ -84,7 +84,7 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture second">
-					<img src="../css/images/food/mixed-berry-cinnamon-studel-image.jpg" alt="mixed-berry-cinnamon-studel-2" width="100%">
+					<img src="/library/images/food/mixed-berry-cinnamon-studel-image.jpg" alt="mixed-berry-cinnamon-studel-2" width="100%">
 				</div>
 
 				<div class="utensils">
@@ -98,7 +98,7 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture third">
-					<img src="../css/images/food/mixed-berry-cinnamon-studel-image-2.jpg" alt="mixed-berry-cinnamon-studel-3" width="100%">
+					<img src="/library/images/food/mixed-berry-cinnamon-studel-image-2.jpg" alt="mixed-berry-cinnamon-studel-3" width="100%">
 				</div>
 
 				<div class="directions">
@@ -125,7 +125,7 @@ include "../php/head-recipes.php";
 					</ul>
 				</div>
 
-				<div class="fb-comments" data-width="100%" data-href="http://jessescott.plutolighthouse.net/recipes/recipe-mixed-berry-cinnamon-studel.php" data-numposts="5"></div>
+				<div class="fb-comments" data-width="100%" data-href="http://www.darwinsbark.ca/recipes/recipe-mixed-berry-cinnamon-studel.php" data-numposts="5"></div>
 			</div>
 		</div>	
 	</div>
@@ -134,8 +134,13 @@ include "../php/head-recipes.php";
 <!-- end page content -->
 
 <?php
-include "../php/footer.php";
+require_once "../partials/footer.php";
 ?>
+
+<?php
+require_once "../partials/scripts.php";
+?>
+
 
 </body>
 </html>

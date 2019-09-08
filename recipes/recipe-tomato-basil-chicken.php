@@ -1,26 +1,34 @@
 
 <!DOCTYPE html>
 
-
 <?php
-include "../php/head-recipes.php";
+require_once "../partials/head.php";
 ?>
 
-<link rel="stylesheet" type="text/css" href="../css/food.css" />
-<link rel="stylesheet" type="text/css" href="../css/recipes.css" />
+<link rel="stylesheet" type="text/css" href="/library/css/food.css" />
+<link rel="stylesheet" type="text/css" href="/library/css/recipes.css" />
 
-<script type="text/javascript" src="../js/callbyscroll.js"></script>
+<script type="text/javascript" src="/library/js/callbyscroll.js"></script>
 
 </head>
 
-<body id="body" class="body" data-page="tomato-basil-chicken">
+
+<?php
+	include "../php/recipe-book.php";
+
+	$recipe_title = $TomatoBasilChicken->name;
+	$recipe_name = $TomatoBasilChicken->file_name;
+?>
+
+
+<body id="body" class="body" data-page="<?= $recipe_name ?>">
 
 <!-- begin header -->
 <div id="header" class="header">
     <div class="header_wrapper">
 
 	<?php
-	include "../php/sites.php";
+	require_once "../partials/sites.php";
 	?>
 
     </div>
@@ -28,32 +36,65 @@ include "../php/head-recipes.php";
 <!-- end header -->
 
 <!-- begin content -->
-
-<div id="tomato-basil-chicken-page" class="page">
+<div id="<?= $recipe_name ?>-page" class="page">
 	<div id="background" class="background"></div>
+
+	<div id="test-region" style="height: 600px; width: 100%; color: #fff; padding: 100px 0 0;">
+	<?php 
+
+	//$handler = new PDO('mysql:host=jas@138.197.84.156;dbname=darwinsbark','admin','Thrice');
+
+	// $hostname='138.197.84.156';
+	// $port='22';
+	$hostname='127.0.0.1';
+	$port='3306';
+	$username='admin';
+	$password='Thrice';
+
+	try {
+		$dbh = new PDO("mysql:host=$hostname;port=$port;dbname=darwinsbark",$username,$password);
+
+		$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // <== add this line
+		echo 'Connected to Database<br/>';
+
+		$sql = "SELECT * FROM darwinsbark.recipes";
+		foreach ($dbh->query($sql) as $row)
+		{
+			echo $row["name"] ." - ". $row["category"] ."<br/>";
+		}
+
+
+		$dbh = null;
+	}
+	catch(PDOException $e)
+	{
+		echo $e->getMessage();
+	}
+
+	?>
+	</div>
 
 	<div id="content" class="content">
 		<div class="content_wrapper">
 			<div class="recipe">
 				<div class="title">
-					<h2>Tomato Basil Bake Chicken</h2>
-					<img src="../css/images/food/tomato-basil-chicken-banner.jpg" alt="tomato-basil-chicken-banner" width="100%">
+					<h2><?= $recipe_title ?></h2>
+					<img src="/library/images/food/<?= $recipe_name ?>/<?= $recipe_name ?>-banner.jpg" alt="<?= $recipe_name ?>-banner" width="100%">
 				</div>
 
-
 				<?php
-				include "../php/recipe-social.php";
+				require_once "../partials/recipe-social.php";
 				?>
 
-				<div class=recipe-path>
+				<div class="recipe-path">
 					<div>
 						<a href="../food.php">Recipes</a>
 					</div>
-					<div>Tomato Basil Bake Chicken</div>
+					<div><?= $recipe_title ?></div>
 				</div>
 
 				<div class="picture main">
-					<img src="../css/images/food/tomato-basil-chicken-spoon.jpg" alt="tomato-basil-chicken-spoon" width="100%">
+					<img src="/library/images/food/<?= $recipe_name ?>/<?= $recipe_name ?>-spoon.jpg" alt="<?= $recipe_name ?>-spoon" width="100%">
 				</div>
 
 				<div class="ingredients">
@@ -72,11 +113,11 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture third">
-					<img src="../css/images/food/tomato-basil-chicken-dish.jpg" alt="tomato-basil-chicken-dish" width="100%">
+					<img src="/library/images/food/<?= $recipe_name ?>/<?= $recipe_name ?>-dish.jpg" alt="<?= $recipe_name ?>-dish" width="100%">
 				</div>
 
 				<div class="picture third">
-					<img src="../css/images/food/tomato-basil-chicken-breast.jpg" alt="tomato-basil-chicken-breast" width="100%">
+					<img src="/library/images/food/<?= $recipe_name ?>/<?= $recipe_name ?>-breast.jpg" alt="<?= $recipe_name ?>-breast" width="100%">
 				</div>
 
 				<div class="utensils">
@@ -88,8 +129,6 @@ include "../php/head-recipes.php";
 					</ul>
 				</div>
 
-
-
 				<div class="directions">
 					<h2>Directions</h2>
 					<ul>
@@ -100,16 +139,19 @@ include "../php/head-recipes.php";
 						<li>Bake (at 375°) for 15 minutes.</li>
 					</ul>
 				</div>
-				<div class="fb-comments" data-width="100%" data-href="http://jessescott.plutolighthouse.net/recipes/recipe-tomato-basil-chicken.php" data-numposts="5"></div>
+				<div class="fb-comments" data-width="100%" data-href="http://www.darwinsbark.ca/" data-numposts="5"></div>
 			</div>
 		</div>	
 	</div>
 </div>
-
 <!-- end page content -->
 
 <?php
-include "../php/footer.php";
+require_once "../partials/footer.php";
+?>
+
+<?php
+require_once "../partials/scripts.php";
 ?>
 
 </body>

@@ -2,20 +2,20 @@
 
 
 <?php
-include "php/head.php";
+require_once "partials/head.php";
 ?>
 
-<link rel="stylesheet" type="text/css" href="css/members.css" />
+<link rel="stylesheet" type="text/css" href="library/css/members.css" />
 
-<script type="text/javascript" src="js/tech.js"></script>
-<script type="text/javascript" src="js/jquery.touchSwipe.js"></script>
-<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="library/js/tech.js"></script>
+<script type="text/javascript" src="library/js/jquery.touchSwipe.js"></script>
+<script type="text/javascript" src="library/js/jquery.touchSwipe.min.js"></script>
 
-<link rel="prefetch" href="css/images/tech/speaker.jpg">
-<link rel="prefetch" href="css/images/tech/usb.jpg">
-<link rel="prefetch" href="css/images/tech/keyboard.jpg">
-<link rel="prefetch" href="css/images/tech/cage.jpg">
-<link rel="prefetch" href="css/images/tech/cables.jpg">
+<link rel="prefetch" href="library/images/tech/speaker.jpg">
+<link rel="prefetch" href="library/images/tech/usb.jpg">
+<link rel="prefetch" href="library/images/tech/keyboard.jpg">
+<link rel="prefetch" href="library/images/tech/cage.jpg">
+<link rel="prefetch" href="library/images/tech/cables.jpg">
 
 </head>
 
@@ -28,7 +28,7 @@ include "php/head.php";
     <div class="header_wrapper">
 
 	<?php
-	include "php/sites.php";
+	require_once "php/sites.php";
 	?>
 
 	<div class=></div>
@@ -77,7 +77,7 @@ include "php/head.php";
 <!-- end page content -->
 
 <?php
-include "php/footer.php";
+require_once "php/footer.php";
 ?>
 
 </body>

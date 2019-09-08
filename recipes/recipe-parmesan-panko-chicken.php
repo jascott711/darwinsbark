@@ -2,11 +2,11 @@
 
 
 <?php
-include "../php/head-recipes.php";
+require_once "../partials/head.php";
 ?>
 
-<link rel="stylesheet" type="text/css" href="../css/food.css" />
-<link rel="stylesheet" type="text/css" href="../css/recipes.css" />
+<link rel="stylesheet" type="text/css" href="/library/css/food.css" />
+<link rel="stylesheet" type="text/css" href="/library/css/recipes.css" />
 
 <script type="text/javascript" src="../js/callbyscroll.js"></script>
 
@@ -19,7 +19,7 @@ include "../php/head-recipes.php";
     <div class="header_wrapper">
 
 	<?php
-	include "../php/sites.php";
+	require_once "../partials/sites.php";
 	?>
 
     </div>
@@ -36,11 +36,11 @@ include "../php/head-recipes.php";
 			<div class="recipe">				
 				<div class="title">
 					<h2>Parmesan Panko Chicken</h2>
-					<img src="../css/images/food/parmesan-panko-chicken-banner.jpg" alt="parmesan-panko-chicken-banner" width="100%">
+					<img src="/library/images/food/parmesan-panko-chicken-banner.jpg" alt="parmesan-panko-chicken-banner" width="100%">
 				</div>
 
 				<?php
-				include "../php/recipe-social.php";
+				require_once "../partials/recipe-social.php";
 				?>
 
 				<div class=recipe-path>
@@ -51,7 +51,7 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture main">
-					<img src="../css/images/food/parmesan-panko-chicken-title.jpg" alt="parmesan-panko-chicken" width="100%">
+					<img src="/library/images/food/parmesan-panko-chicken-title.jpg" alt="parmesan-panko-chicken" width="100%">
 				</div>
 
 				<div class="ingredients">
@@ -68,7 +68,7 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture second">
-					<img src="../css/images/food/parmesan-panko-chicken-ingredients.jpg" alt="parmesan-panko-chicken-2" width="100%">
+					<img src="/library/images/food/parmesan-panko-chicken-ingredients.jpg" alt="parmesan-panko-chicken-2" width="100%">
 				</div>
 
 				<div class="utensils">
@@ -82,7 +82,7 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture third">
-					<img src="../css/images/food/parmesan-panko-chicken-bonus.jpg" alt="parmesan-panko-chicken-3" width="100%">
+					<img src="/library/images/food/parmesan-panko-chicken-bonus.jpg" alt="parmesan-panko-chicken-3" width="100%">
 				</div>
 
 				<div class="directions">
@@ -96,7 +96,7 @@ include "../php/head-recipes.php";
 						<li>Bake (at 375°) for 15 minutes.</li>
 					</ul>
 				</div>
-				<div class="fb-comments" data-width="100%" data-href="http://jessescott.plutolighthouse.net/recipes/recipe-parmesan-panko-chicken.php" data-numposts="5"></div>
+				<div class="fb-comments" data-width="100%" data-href="http://www.darwinsbark.ca/recipes/recipe-parmesan-panko-chicken.php" data-numposts="5"></div>
 			</div>
 		</div>	
 	</div>
@@ -105,8 +105,13 @@ include "../php/head-recipes.php";
 <!-- end page content -->
 
 <?php
-include "../php/footer.php";
+require_once "../partials/footer.php";
 ?>
+
+<?php
+require_once "../partials/scripts.php";
+?>
+
 
 </body>
 </html>

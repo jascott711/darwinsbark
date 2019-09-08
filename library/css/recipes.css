@@ -1,0 +1,161 @@
+@charset "utf-8";
+/*-- darwinsbark - food - Jesse Scott - June 5th, 2016 --*/
+
+/*-- Content --*/
+.recipe	{
+	padding: 20px;
+    overflow: auto;
+}
+
+.recipe	.title	{    
+	position: relative;
+	color: #fff;
+	height: 300px;
+    font-size: 56px;
+	line-height: 120%;   
+	text-align: left;
+    background-size: cover;
+    background-position: center;  
+	background-color: rgba(255,255,255,0.4);
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+.recipe	.title h2 {
+	font-family: 'Montserrat', sans-serif;	
+	position: absolute;
+	top: 100px;
+	left: 20px;
+    margin: 0;
+    font-size: 100%;
+}
+.recipe	.title img {
+    /*visibility: hidden;*/
+    float: right;
+}
+
+.recipe	.recipe-path {
+	font-family: 'Montserrat', sans-serif;	
+	background-color: rgba(255,255,255,0.4);    
+	color: #fff;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.5);
+	border-radius: 3px;
+	border: #000 solid 1px;
+	overflow: hidden;
+	margin: 20px 0;
+}
+.recipe	.recipe-path .recipe-path-wrapper {
+	width: auto;
+	float: left;
+    padding: 20px 20px 20px 10px; 
+    border-right: #fff solid 2px;
+    text-shadow: #999 1px 1px;
+}
+.recipe	.recipe-path .fa {
+	display: inline-block;
+	font-size: 14px !important;
+	width: 12px;
+}
+.recipe	.recipe-path span a {
+	text-decoration: underline;
+}
+.recipe	.recipe_content_block {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.recipe	.recipe_content_block .recipe_content {
+	font-family: 'Open Sans', sans-serif;	
+	width: auto;
+	background-color: rgba(255,255,255,0.4);
+	box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.5);
+	padding: 20px;
+	margin: 0 1% 40px;
+	box-sizing: border-box;
+}
+.has_full_content .recipe .recipe_content_block .recipe_content {
+	width: 48%;
+	float: left;
+}
+.recipe	.recipe_content_block .recipe_content .recipe_list {    
+	list-style-type: none;
+	padding: 0;	
+}
+.recipe	.recipe_content_block .recipe_content .recipe_list h3 {
+	font-size: 18px;
+	margin: 0;
+}
+.recipe	.recipe_content_block .recipe_content .recipe_list li {
+	font-size: 14px;
+	margin: 0;
+}
+.recipe	.recipe_content_block .recipe_content.picture {
+	padding: 0;
+}
+.recipe	.recipe_content_block .recipe_content > img {
+    display: grid;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.5);
+}
+.recipe	.recipe_content_block .recipe_content #create_recipe h3 {
+	font-size: 18px;
+	margin: 0;	
+}
+.recipe	.recipe_content_block .recipe_content #create_recipe input {
+	width: calc(100% - 50px);
+	margin: 0 0 10px;
+	box-sizing: border-box;
+}
+.recipe	.recipe_content_block .recipe_content #create_recipe button {
+	width: 50px;
+}
+
+
+.fb_iframe_widget_fluid span {
+    background-color: rgba(255,255,255,0.4);
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.5);
+}
+
+
+
+@media screen and (max-width: 920px)	{
+	.recipe .ingredients,
+	.utensils,
+	.directions,
+	.bonus,
+	.picture,
+	.list.one,
+	.list.two,
+	.bonus .ingredients, 
+	.bonus .directions  {
+			width: 100%;
+			float: none;
+		}
+	.recipe .ingredients,
+	.utensils,
+	.directions,
+	.bonus,
+	.picture	{
+		margin-bottom: 10px;
+	}
+	.title h2 {
+    	line-height: initial;
+	}
+
+	.fb_iframe_widget {
+	    float: none;
+	    padding: 0;
+	}
+
+	/*-- Recipes --*/
+	/*-- Recipes : Curry Mango Chicken with Coconut Rice --*/
+	[data-page="curry-mango-chicken-coconut-rice"] .title	{
+		font-size: 38px;
+	}
+
+	/*-- Recipes : Lemon Cream Squares --*/
+	[data-page="lemon-cream-squares"] .title	{
+	    font-size: 48px;
+	}
+	[data-page="parmesan-panko-chicken"] .title	{
+		font-size: 28px;
+	}
+}

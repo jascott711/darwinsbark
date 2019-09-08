@@ -2,11 +2,11 @@
 
 
 <?php
-include "../php/head-recipes.php";
+require_once "../partials/head.php";
 ?>
 
-<link rel="stylesheet" type="text/css" href="../css/food.css" />
-<link rel="stylesheet" type="text/css" href="../css/recipes.css" />
+<link rel="stylesheet" type="text/css" href="/library/css/food.css" />
+<link rel="stylesheet" type="text/css" href="/library/css/recipes.css" />
 
 <script type="text/javascript" src="../js/callbyscroll.js"></script>
 
@@ -19,7 +19,7 @@ include "../php/head-recipes.php";
     <div class="header_wrapper">
 
 	<?php
-	include "../php/sites.php";
+	require_once "../partials/sites.php";
 	?>
 
     </div>
@@ -36,11 +36,11 @@ include "../php/head-recipes.php";
 			<div class="recipe">								
 				<div class="title">
 					<h2>Curry Mango Chicken Coconut Rice</h2>
-					<img src="../css/images/food/curry-mango-chicken-coconut-rice-banner.jpg" alt="curry-mango-chicken-coconut-rice-banner" width="100%">
+					<img src="/library/images/food/curry-mango-chicken-coconut-rice-banner.jpg" alt="curry-mango-chicken-coconut-rice-banner" width="100%">
 				</div>
 
 				<?php
-				include "../php/recipe-social.php";
+				require_once "../partials/recipe-social.php";
 				?>
 
 				<div class=recipe-path>
@@ -51,7 +51,7 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture main">
-					<img src="../css/images/food/curry-mango-chicken-coconut-rice-title.jpg" alt="curry-mango-chicken-coconut-rice" width="100%">
+					<img src="/library/images/food/curry-mango-chicken-coconut-rice-title.jpg" alt="curry-mango-chicken-coconut-rice" width="100%">
 				</div>
 
 				<div class="ingredients">
@@ -76,11 +76,11 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture second">
-					<img src="../css/images/food/curry-mango-chicken-coconut-rice-image.jpg" alt="curry-mango-chicken-coconut-rice-2" width="100%">
+					<img src="/library/images/food/curry-mango-chicken-coconut-rice-image.jpg" alt="curry-mango-chicken-coconut-rice-2" width="100%">
 				</div>
 
 				<div class="picture third">
-					<img src="../css/images/food/curry-mango-chicken-coconut-rice-image-2.jpg" alt="curry-mango-chicken-coconut-rice-3" width="100%">
+					<img src="/library/images/food/curry-mango-chicken-coconut-rice-image-2.jpg" alt="curry-mango-chicken-coconut-rice-3" width="100%">
 				</div>
 
 				<div class="utensils">
@@ -92,7 +92,7 @@ include "../php/head-recipes.php";
 				</div>
 
 				<div class="picture forth">
-					<img src="../css/images/food/curry-mango-chicken-coconut-rice-image-3.jpg" alt="curry-mango-chicken-coconut-rice-4" width="100%">
+					<img src="/library/images/food/curry-mango-chicken-coconut-rice-image-3.jpg" alt="curry-mango-chicken-coconut-rice-4" width="100%">
 				</div>
 
 				<div class="directions">
@@ -105,7 +105,7 @@ include "../php/head-recipes.php";
 						<li>Bake (at 375°) for 15 minutes.</li>
 					</ul>
 				</div>
-				<div class="fb-comments" data-width="100%" data-href="http://jessescott.plutolighthouse.net/recipes/recipe-curry-mango-chicken-coconut-rice.php" data-numposts="5"></div>
+				<div class="fb-comments" data-width="100%" data-href="http://www.darwinsbark.ca/recipes/recipe-curry-mango-chicken-coconut-rice.php" data-numposts="5"></div>
 			</div>
 		</div>	
 	</div>
@@ -114,8 +114,13 @@ include "../php/head-recipes.php";
 <!-- end page content -->
 
 <?php
-include "../php/footer.php";
+require_once "../partials/footer.php";
 ?>
+
+<?php
+require_once "../partials/scripts.php";
+?>
+
 
 </body>
 </html>
